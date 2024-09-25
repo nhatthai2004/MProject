@@ -8,18 +8,18 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <distributionManagement>
-        <repository>
-            <id>my-repo</id>
-            <name>My Release Repository</name>
-            <url>http://my.repo.url/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>my-snapshots</id>
-            <name>My Snapshot Repository</name>
-            <url>http://my.repo.url/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>Maven Central Repository</name>
+        <url>https://repo1.maven.org/maven2/</url>
+    </repository>
+    <snapshotRepository>
+        <id>my-snapshots</id>
+        <name>My Snapshot Repository</name>
+        <url>https://artifactory.mycompany.com/artifactory/libs-snapshot</url> <!-- Artifactory URL -->
+    </snapshotRepository>
+</distributionManagement>
 
     <dependencies>
         <!-- Add your dependencies here -->
