@@ -1,27 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"   
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  
+  <modelVersion>4.0.0</modelVersion>  
+  
+  <groupId>com.github.nhatthai</groupId>  
+  <artifactId>my-maven-project</artifactId>  
+  <version>1.0-SNAPSHOT</version>  
+  <packaging>jar</packaging>  
+  
+  <name>My Maven Project</name>  
+  <url>https://mycompany.com/my-maven-project</url>  
+  
+  <dependencies>  
+    <dependency>  
+      <groupId>junit</groupId>  
+      <artifactId>junit</artifactId>  
+      <version>4.8.2</version>  
+      <scope>test</scope>  
+    </dependency>  
+  </dependencies>  
 
-    <groupId>com.github.nhatthai</groupId>
-    <artifactId>my-maven-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-<distributionManagement>
+  <distributionManagement>
     <repository>
-        <id>central</id>
-        <name>Maven Central Repository</name>
-        <url>https://repo1.maven.org/maven2/</url>
+      <id>my-releases</id>
+      <url>https://artifactory.mycompany.com/artifactory/libs-release</url> <!-- Replace with your actual releases repo URL -->
     </repository>
     <snapshotRepository>
-        <id>my-snapshots</id>
-        <name>My Snapshot Repository</name>
-        <url>https://artifactory.mycompany.com/artifactory/libs-snapshot</url> <!-- Artifactory URL -->
+      <id>my-snapshots</id>
+      <url>https://artifactory.mycompany.com/artifactory/libs-snapshot</url> <!-- Replace with your actual snapshot repo URL -->
     </snapshotRepository>
-</distributionManagement>
-
-    <dependencies>
-        <!-- Add your dependencies here -->
-    </dependencies>
+  </distributionManagement>
+  
 </project>
