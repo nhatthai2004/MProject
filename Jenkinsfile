@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building the project...'
+stage('Build') {
+    steps {
+        script {
+            withMaven(maven: 'Maven 3.8.8') {
                 sh 'mvn clean package'
             }
         }
